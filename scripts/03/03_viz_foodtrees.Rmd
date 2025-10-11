@@ -1,0 +1,74 @@
+---
+title: "03_viz_foodtrees"
+output: html_document
+date: "2025-10-11"
+---
+
+# ===============================================================================================================
+# Visualize foodtrees for NHANES mixed meals and ingredients
+# Created on 02/08/2023 by Rie Sadohara
+# Modified on 10/10/25 by Jules Larke
+# ===============================================================================================================
+
+```{r}
+# Load necessary packages.
+library(ggtree)
+
+# Load the necessary functions.
+source("../../diet_diver_lib/viz_food_tree.r")
+
+# create directory to save plots
+dir.create("../../plot/")
+```
+
+```{r}
+# Load your tree object.
+tree <- read.tree("../../data/02/foodtree_out/wweia_foodcode_tree.nwk")
+# eg_tree <- read.tree(text = "/Users/jules.larke/work/github/DietDiveR/eg_data/NHANES/Laboratory_data/Foodtree/Food_D12_FC_QC_demo_QCed_males60to79_3Lv.nwk")
+
+# It is OK to see an error that says:
+# Found more than one class "phylo" in cache; using the first, from namespace 'phyloseq'
+# Also defined by 'tidytree'
+
+# Prepare the tree data for visualization.
+PrepFoodTreePlots(input.tree = tree)
+
+# Create a color-coded and annotated food tree with 9 L1 levels.
+# It is OK to see some warning messages that say: 
+# Coordinate system already present. Adding new coordinate system, which will replace the existing one.
+# Scale for 'y' is already present. Adding another scale for 'y', which will replace the existing scale.
+VizFoodTree(input.tree=tree, layout = "radial")  
+
+# Take a look at the tree.
+annotated_tree
+
+# You can also visualize trees of different levels; Lv2, Lv3, etc., which corresponds to the classification 
+# depth of each food item in the dataset. For example, Lv3 contains L1, L2, and L3 categories of food; whereas
+# Lv4 contains L1, L2, L3, and L4 categories. Thus, as the level goes deeper, the more internal nodes there
+# will be in the foodtree.
+
+# Save.
+ggsave("../../plot/foodcode_tree.pdf", annotated_tree,
+       device="pdf", width=7.2, height=7)
+```
+
+```{r}
+### Now do the same for the ingredient food tree (FNDDS)
+
+# Load your tree object.
+tree <- read.tree("../../data/02/foodtree_out/wweia_ingredient_tree.nwk") 
+
+# Prepare the tree data for visualization.
+PrepFoodTreePlots(input.tree = tree)
+
+# Create a color-coded and annotated food tree with 9 L1 levels.
+VizFoodTree(input.tree=tree, layout = "radial")  
+
+# Take a look at the tree.
+annotated_tree
+
+# Save.
+ggsave("../../plot/fndds_ingredient_tree.pdf", annotated_tree,
+       device="pdf", width=7.2, height=7)
+```
+
