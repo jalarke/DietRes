@@ -72,3 +72,22 @@ ggsave("../../plot/fndds_ingredient_tree.pdf", annotated_tree,
        device="pdf", width=7.2, height=7)
 ```
 
+```{r}
+### Now do the same for the ingredient food tree (FDA)
+
+# Load your tree object.
+tree <- read.tree("../../data/02/foodtree_out/fda_wweia_ingredient_tree.nwk") 
+
+# Prepare the tree data for visualization.
+PrepFoodTreePlots(input.tree = tree)
+
+# Create a color-coded and annotated food tree with 9 L1 levels.
+VizFoodTree(input.tree=tree, layout = "radial")  
+
+# Take a look at the tree.
+annotated_tree
+
+# Save.
+ggsave("../../plot/fda_ingredient_tree.pdf", annotated_tree,
+       device="pdf", width=7.2, height=7)
+```

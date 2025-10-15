@@ -1,5 +1,5 @@
 ---
-title: "03_make_foodtrees"
+title: "03_generate_FoodTrees"
 output: html_document
 date: "2025-10-10"
 ---
@@ -165,9 +165,6 @@ polyphenol = read.csv("../../data/01/polyphenol/NHANES_polyphenol_content_total_
 
 # subset participants for which polyphenol intakes are estimated
 recalls_filter = recalls %>% filter(SEQN %in% polyphenol$SEQN)
-
-# check number of participants
-n_distinct(recalls_filter$SEQN)
 
 # load taxa data generated above
 taxa = read.csv("../../data/02/fda_wweia_ingredient_taxa_clean.txt", sep="\t")
