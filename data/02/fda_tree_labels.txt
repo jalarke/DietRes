@@ -1,0 +1,728 @@
+Level.code	Main.food.description
+1	Milk_and_Milk_Products
+11	Milks_and_milk_drinks
+110	Fluid_milk
+1100	Milk, whole, fluid
+1101	Milk, 2% fat, fluid
+1102	Milk, 1% fat, fluid
+1103	Milk, nonfat, fluid
+1104	Milk, buttermilk, 1% fat, fluid
+1105	Milk, buttermilk, whole, fluid
+1106	Milk, buttermilk, 2% fat, fluid
+1107	Milk, goat, whole, fluid
+111	Processed_milk
+1110	Milk, whole, dried
+1111	Milk, nonfat, dried
+1112	Milk, buttermilk, 1% fat, dried
+1113	Whey, dried
+1114	Milk, 2% fat, evaporated
+1115	Milk, nonfat, evaporated
+1116	Milk, whole, with 77% moisture loss (for dulce de leche and condensed milk)
+12	Creams_and_cream_substitutes
+120	Cream, fluid
+121	Cream, fluid, fat free
+122	Cream, sour
+123	Cream, sour, light/reduced fat/imitation/fat free
+13	Cheeses
+130	Natural_cheeses
+1300	Soft_cheeses
+13000	Cheese, brie
+13001	Cheese, camembert
+13002	Cheese, cream
+13003	Cheese, cream, nonfat
+13004	Cheese, cream, low fat
+1301	Semi_hard_cheeses
+13010	Cheese, cheddar
+13011	Cheese, cheddar, reduced fat
+13012	Cheese, cheddar, nonfat
+13013	Cheese, colby
+13014	Cheese, monterey
+13015	Cheese, monterey, reduced fat
+13016	Cheese, brick
+13017	Cheese, muenster
+13018	Cheese, muenster, reduced fat
+13019	Cheese, gouda/edam
+1302	Hard_cheeses
+13020	Cheese, parmesan
+13021	Cheese, parmesan, reduced fat/fat free
+13022	Cheese, romano
+1303	Cheese, blue/roquefort
+1304	Swiss_type_cheeses
+13040	Cheese, swiss
+13041	Cheese, swiss, low fat/nonfat
+13042	Cheese, gruyere
+1305	Italian_cheeses
+13050	Cheese, mozzarella
+13051	Cheese, mozzarella, low fat/nonfat
+13052	Cheese, provolone
+13053	Cheese, provolone, reduced fat
+13054	Cheese, ricotta
+13055	Cheese, fontina
+1306	Cheese, feta
+1307	Cheese, goat
+131	Cottage_cheeses
+1310	Cheese, cottage
+1311	Cheese, cottage, low fat
+132	Mexican_cheeses
+1320	Cheese, queso fresco
+1321	Cheese, queso anejo
+1322	Cheese, queso chihuahua
+1323	Cheese, queso seco
+1324	Cheese, cotija
+1325	Cheese, Mexican blend
+1326	Cheese, Mexican blend, reduced fat
+1327	Cheese, Oaxaca
+2	Meat_Poultry_Fish_and_Mixtures
+21	Poultry
+210	Chicken
+2100	Chicken, lean and fat, cooked
+2101	Chicken, variety meat, giblets (incl liver/gizzard), cooked
+211	Turkey
+2110	Turkey, lean and fat, cooked
+2111	Turkey, variety meat, giblets (incl liver/gizzard), cooked
+212	Duck, lean and fat, cooked
+213	Game_birds
+2130	Quail, lean and fat, cooked
+2131	Pheasant, lean and fat, cooked
+2132	Dove, lean and fat, cooked
+22	Beef
+220	Ground_beef
+2200	Beef, lean and fat, raw
+2201	Beef, lean and fat, cooked
+2202	Beef, lean and fat, canned/cooked
+2203	Beef, lean and fat, dried
+221	Beef_organs
+2210	Beef, variety meat, brains, cooked
+2211	Beef, variety meat, heart, cooked
+2212	Beef, variety meat, kidney, cooked
+2213	Beef, variety meat, liver, cooked
+2214	Beef, variety meat, tongue, cooked
+2215	Beef, variety meat, tripe, cooked
+23	Pork
+230	Pork_cuts
+2300	Pork, lean and fat, cooked
+231	Pork_organs
+2310	Pork, variety meat, chitterlings, cooked
+2311	Pork, variety meat, stomach, cooked
+2312	Pork, variety meat, feet, cooked
+232	Pork, variety meat, skin, dehydrated (pork rinds)
+24	Lamb_veal_game_other
+240	Veal, lean and fat, cooked
+241	Lamb, lean and fat, cooked
+242	Game_meat
+2420	Bear, lean and fat, cooked
+2421	Beaver, lean and fat, cooked
+2422	Bison, lean and fat, cooked
+2423	Pig, wild, lean and fat, cooked
+2424	Moose, lean and fat, cooked
+2425	Goat, lean and fat, cooked
+2426	Rabbit, domesticated, lean and fat, cooked
+2427	Raccoon, lean and fat, cooked
+2428	Squirrel, lean and fat, cooked
+2429	Deer, lean and fat, cooked
+243	Amphibians_reptiles
+2430	Frog legs, cooked
+2431	Turtle, cooked
+26	Fish_and_shellfish
+260	Finfish
+2600	Cod_family
+26000	Fish, cod, cooked
+26001	Fish, cod, raw
+26002	Fish, cod, dried
+26003	Fish, haddock, cooked
+26004	Fish, haddock, smoked
+26005	Fish, pollock, cooked
+2601	Flatfish
+26010	Fish, flatfish, cooked
+26011	Fish, halibut, cooked
+2602	Tuna_mackerel
+26020	Fish, tuna, canned/cooked
+26021	Fish, tuna, raw
+26022	Fish, mackerel, cooked
+26023	Fish, mackerel, raw
+2603	Herring_sardines_anchovies
+26030	Fish, herring, raw
+26031	Fish, herring, cooked
+26032	Fish, sardines, cooked
+26033	Fish, anchovy, canned/cooked
+2604	Bass_snapper
+26040	Fish, sea bass, raw
+26041	Fish, snapper, raw
+2605	Salmon_trout
+26050	Fish, salmon, smoked
+26051	Fish, salmon, cooked
+26052	Fish, salmon, raw
+26053	Fish, trout, cooked
+2606	Freshwater_fish
+26060	Fish, perch, cooked
+26061	Fish, pike, cooked
+26062	Fish, carp, cooked
+2607	Catfish_tilapia
+26070	Fish, catfish, cooked
+26071	Fish, tilapia, cooked
+2608	Other_fish
+26080	Fish, croaker, cooked
+26081	Fish, eel, cooked
+26082	Fish, mullet, cooked
+26083	Fish, ocean perch, cooked
+26084	Fish, pompano, cooked
+26085	Fish, porgy/scup, cooked
+26086	Fish, shark, cooked
+26087	Fish, sturgeon, cooked
+26088	Fish, swordfish, cooked
+26089	Fish, whiting, cooked
+2609	Fish roe, sturgeon, raw
+261	Shellfish
+2610	Crustaceans
+26100	Crustaceans, crab, cooked
+26101	Crab, cooked
+26102	Crustaceans, lobster, cooked
+26103	Crustaceans, crayfish/crawfish, cooked
+26104	Crustaceans, shrimp, canned/cooked
+2611	Mollusks
+26110	Mollusks, clam, raw
+26111	Mollusks, clam, canned/cooked
+26112	Mollusks, oysters, raw
+26113	Mollusks, oysters, cooked
+26114	Mollusks, scallops, cooked
+26115	Mollusks, abalone, cooked
+26116	Mollusks, squid, canned/cooked
+26117	Mollusks, octopus, cooked
+26118	Mollusks, mussels, cooked
+26119	Mollusks, snails, cooked
+3	Eggs
+31	Eggs
+310	Chicken_eggs
+3100	Egg, whole, raw
+3101	Egg, whole, cooked
+3102	Egg, whole, dried
+3103	Egg, white, cooked
+3104	Egg, yolk, cooked
+311	Other_poultry_eggs
+3110	Egg, duck, cooked
+3111	Egg, goose, cooked
+3112	Egg, quail, canned
+4	Beans_Peas_Other_Legumes_Nuts_and_Seeds
+41	Legumes
+410	Beans
+4100	Kidney_beans
+41000	Beans, kidney, mature, raw (consumed cooked/heat-treated)
+41001	Beans, kidney, mature, cooked
+41002	Beans, kidney, mature, canned/cooked
+4101	Black_beans
+41010	Beans, black, mature, raw (consumed cooked/heat-treated)
+41011	Beans, black, mature, cooked
+41012	Beans, black, mature, canned/cooked
+4102	White_beans
+41020	Beans, white, mature, cooked
+41021	Beans, great northern, mature, canned
+41022	Beans, navy, mature, canned/cooked
+4103	Pinto_beans
+41030	Beans, pinto, mature, raw (consumed cooked/heat-treated)
+41031	Beans, pinto, mature, canned/cooked
+4104	Pink_beans
+41040	Beans, pink, mature, raw (consumed cooked/heat-treated)
+41041	Beans, pink, mature, cooked
+4105	Other_beans
+41050	Beans, yellow, mature, cooked
+4106	Fresh_beans
+41060	Beans, lima, immature, cooked
+41061	Beans, lima, mature, cooked
+41062	Cowpeas (black-eyed peas), immature, canned
+41063	Pigeonpeas, immature, canned
+41064	Beans, green/snap, raw
+41065	Beans, green/snap, cooked
+41066	Beans, green/snap, canned/cooked
+411	Beans, fava/broad, mature, cooked
+412	Chickpeas
+4120	Chickpeas (garbanzo beans), mature, raw (consumed cooked/heat-treated)
+4121	Chickpeas (garbanzo beans), mature, canned/cooked
+413	Lentils
+4130	Lentils, raw (consumed cooked/heat-treated)
+4131	Lentils, canned/cooked
+414	Peas, green, mature (split), cooked
+415	Mung_beans
+4150	Beans, mung, mature, cooked
+4151	Beans, mung, mature, sprouted, canned/cooked
+416	Soybeans
+4160	Beans, soy, mature, dried
+4161	Beans, soy, immature, cooked
+4162	Beans, soy, mature, sprouted, cooked
+417	Soybean_derived_products
+4170	Flour, soy
+4171	Soy meal, defatted
+4172	Protein, soy isolate
+4173	Protein, textured vegetable
+4174	Miso, cooked
+4175	Soy sauce
+4176	Tofu
+42	Nuts_and_nut_butters
+420	Tree_nuts
+4200	Almonds
+42000	Nuts, almonds, roasted/heat-treated
+42001	Nuts, almonds, unroasted
+4201	Nuts, walnuts, roasted/heat-treated
+4202	Nuts, pecans, roasted/heat-treated
+4203	Nuts, hazelnuts or filberts, roasted/heat-treated
+4204	Nuts, cashew, roasted/heat-treated
+4205	Nuts, brazilnuts, roasted/heat-treated
+4206	Nuts, pine, dried
+4207	Nuts, pistachio, roasted/heat-treated
+4208	Nuts, macadamia, roasted/heat-treated
+4209	Nuts, chestnuts, roasted/heat-treated
+421	Coconut_products
+4210	Nuts, coconut meat, dried (desiccated)
+4211	Nuts, coconut cream
+4212	Nuts, coconut milk
+422	Peanuts
+4220	Peanuts, roasted/otherwise heat treated
+4221	Flour, peanut
+43	Seeds
+430	Seeds, chia
+431	Pumpkin_seeds
+4310	Seeds, pumpkin/squash, unroasted
+4311	Seeds, pumpkin/squash, roasted
+432	Seeds, sesame, dried/roasted
+433	Seeds, sunflower, roasted
+434	Seeds, flax, roasted
+5	Grain_Product
+51	Wheat_products
+510	Wheat_flour
+5100	Flour, wheat, refined
+5101	Wheat endosperm, uncooked (consumed cooked/heat-treated)
+5102	Bran, wheat
+52	Rice_products
+520	Rice_varieties
+5200	Rice, brown, uncooked (consumed cooked/heat-treated)
+5201	Rice, white, uncooked (consumed cooked/heat-treated)
+5202	Wild rice, uncooked (consumed cooked/heat-treated)
+5203	Flour, rice, white
+53	Other_grains
+530	Flour, barley
+531	Oat_products
+5310	Oat groats (oatmeal), uncooked (consumed cooked/heat-treated)
+5311	Bran, oat
+532	Corn_products
+5320	Flour, corn, masa
+5321	Cornmeal, degermed
+5322	Corn grits, uncooked (consumed cooked/heat-treated)
+5323	Corn hominy, canned/cooked
+533	Millet
+5330	Millet, uncooked (consumed cooked/heat-treated)
+5331	Flour, millet
+534	Quinoa, uncooked (consumed cooked/heat-treated)
+535	Flour, rye
+536	Buckwheat
+5360	Buckwheat groats, uncooked (consumed cooked/heat-treated)
+5361	Flour, buckwheat
+537	Tapioca, dried
+538	Cereal, infant, oat
+54	Carob_products
+540	Flour, carob
+55	Leavening_agents
+550	Leavening agents, yeast
+551	Leavening agents, baking soda
+552	Leavening agents, baking powder
+553	Leavening agents, cream of tartar
+6	Fruits
+61	Citrus_fruits_and_juices
+610	Oranges
+6100	Oranges, cooked
+6101	Juice, orange
+6102	Juice, orange, concentrate
+611	Grapefruits
+6110	Grapefruit, raw
+6111	Grapefruit, canned (grapefruit only)
+6112	Juice, grapefruit, concentrate
+6113	Juice, grapefruit
+612	Lemons_limes
+6120	Juice, lemon
+6121	Lemon peel, cooked
+6122	Limes, raw
+6123	Juice, lime
+613	Tangerines
+6130	Tangerine/clementine/calamondin/mandarin orange, raw
+6131	Tangerine/clementine/calamondin/mandarin orange, canned/cooked (oranges only)
+614	Kumquats, raw
+62	Stone_fruits
+620	Peaches
+6200	Peaches, raw/frozen
+6201	Peaches, cooked
+6202	Peaches, dried
+6203	Peaches, dried, cooked
+6204	Juice, peach
+621	Apricots
+6210	Apricots, raw
+6211	Apricots, cooked
+6212	Apricots, dried
+6213	Apricots, dried, cooked
+6214	Juice, apricot
+622	Cherries
+6220	Cherries, raw/frozen/canned (cherries only)
+6221	Cherries, cooked
+623	Plums
+6230	Plums, raw
+6231	Plums, canned/cooked (plums only)
+6232	Plums, dried (prunes)
+6233	Plums, dried (prunes), cooked
+6234	Juice, prune
+624	Nectarines, raw
+63	Pome_fruits
+630	Apples
+6300	Apples, raw
+6301	Apples, dried
+6302	Juice, apple
+6303	Juice, apple, concentrate
+6304	Apples, cooked/applesauce
+631	Pears
+6310	Pears, raw
+6311	Pears, asian, raw
+6312	Pears, canned (pears only)
+6313	Pears, dried
+6314	Pears, dried, cooked
+6315	Juice, pear
+64	Berries
+640	Strawberries
+6400	Strawberries, canned/cooked (strawberries only)
+6401	Strawberries, cooked
+641	Blueberries
+6410	Blueberries, canned (blueberries only)
+6411	Blueberries, cooked
+6412	Blueberries, dried, unsweetened
+642	Blackberries
+6420	Juice, blackberry
+6421	Blackberries, cooked
+6422	Blackberries, canned/cooked (blackberries only)
+643	Raspberries
+6430	Raspberries, cooked
+6431	Raspberries, canned/cooked (raspberries only)
+644	Cranberries
+6440	Cranberries, raw
+6441	Cranberries, canned/cooked (cranberries only)
+6442	Juice, cranberry
+645	Other_berries
+6450	Boysenberries, raw/frozen
+6451	Loganberries, raw/frozen
+65	Tropical_fruits
+650	Bananas
+6500	Bananas, raw
+6501	Bananas, dehydrated
+651	Pineapple
+6510	Pineapple, raw/frozen
+6511	Pineapple, raw/frozen/canned (pineapple only)
+6512	Juice, pineapple
+652	Mango
+6520	Mangoes, cooked
+6521	Juice, mango
+653	Papaya
+6530	Papayas, raw
+6531	Juice, papaya
+655	Other_tropical
+6550	Breadfruit, canned/cooked
+6551	Carambola (starfruit), raw
+6552	Guava, raw
+6553	Guava, cooked
+6554	Kiwis, raw
+6555	Litchis/lychees, canned/cooked (litchis only)
+6556	Litchis/lychees, dried
+6557	Passion-fruit, (granadilla), purple, raw
+6558	Juice, passionfruit
+6559	Plantains, raw
+6560	Plantains, cooked
+66	Melons
+660	Melon, cantaloupe, raw
+661	Melon, honeydew, raw
+662	Watermelon, raw
+67	Dried_fruits
+670	Raisins
+671	Dates
+672	Figs, dried
+673	Currants, dried
+68	Other_fruits
+680	Grapes
+6800	Grapes, cooked
+6801	Juice, grape
+681	Pomegranates
+6810	Pomegranates, raw
+6811	Juice, pomegranate
+682	Rhubarb, cooked
+683	Persimmons, raw
+684	Tamarind, raw
+685	Figs
+6850	Figs, raw
+6851	Figs, canned (figs only)
+7	Vegetables
+71	White_potatoes
+710	Potatoes, raw
+711	Potatoes, cooked, peel not eaten or unknown
+712	Potatoes, cooked, with peel
+713	Potatoes, canned, peel not eaten or unknown
+714	Potatoes, dehydrated
+715	Flour, potato
+72	Dark_green_vegetables
+720	Leafy_greens
+7200	Spinach
+72000	Spinach, raw
+72001	Spinach, canned/cooked
+72002	Spinach, canned
+7201	Kale
+72010	Kale, raw
+72011	Kale, cooked
+7202	Collards
+72020	Collards, raw
+72021	Collards, cooked
+7203	Chard
+72030	Chard, Swiss, raw
+72031	Chard, Swiss, cooked
+7204	Beet_greens
+72040	Beet greens, raw
+72041	Beet greens, cooked
+7205	Mustard_greens
+72050	Mustard greens, raw
+72051	Mustard greens, cooked
+7206	Turnip greens, cooked
+7207	Dandelion_greens
+72070	Dandelion greens, raw
+72071	Dandelion greens, cooked
+7208	Other_leafy_greens
+72080	Watercress, raw
+72081	Arugula, raw
+72082	Radicchio, raw
+72083	Coriander (cilantro) leaves, raw
+72084	Parsley, raw
+72085	Lettuce, cos/romaine, raw
+72086	Lettuce, iceberg/butterhead, raw
+72087	Lettuce, leaf, raw
+72088	Cabbage, Chinese, cooked
+72089	Balsam-pear (bitter melon/gourd)/horseradish/jute/radish leaves, cooked
+721	Broccoli_family
+7210	Broccoli
+72100	Broccoli, raw
+72101	Broccoli, cooked
+72102	Broccoli raab, raw
+72103	Broccoli raab, cooked
+72104	Broccoli, Chinese, cooked
+722	Brussels_sprouts
+7220	Brussels sprouts, raw
+7221	Brussels sprouts, cooked
+73	Deep_yellow_vegetables
+730	Carrots
+7300	Carrots, raw
+7301	Carrots, canned/cooked
+7302	Juice, carrot
+731	Sweet_potatoes
+7310	Sweet potatoes, canned/cooked
+7311	Sweet potatoes, canned
+7312	Sweet potato leaves, cooked
+732	Squash, winter, cooked
+733	Pumpkin
+7330	Pumpkin, canned/cooked
+7331	Pumpkin, canned
+7332	Flowers or blossoms of sesbania, squash, or lily, cooked
+74	Tomatoes_and_tomato_sauces
+740	Fresh_tomatoes
+7400	Tomatoes, raw
+7401	Tomatoes, dehydrated
+741	Tomato_products
+7410	Tomatoes, canned/cooked
+7411	Juice, tomato
+7412	Tomato paste
+7413	Tomato sauce, canned/cooked
+7414	Tomato puree, canned/cooked
+75	Common_vegetables
+750	Cabbage_family
+7500	Cabbage
+75000	Cabbage, raw
+75001	Cabbage, cooked
+75002	Cabbage, mustard, cooked
+7501	Cauliflower
+75010	Cauliflower, raw
+75011	Cauliflower, cooked
+751	Root_vegetables
+7510	Beets
+75100	Beets, raw
+75101	Beets, canned/cooked
+75102	Beets, canned
+7511	Turnips
+75110	Turnips, raw
+75111	Turnips, canned/cooked
+7512	Radishes, raw
+7513	Rutabagas
+75130	Rutabagas, raw
+75131	Rutabagas, cooked
+7514	Parsnips, cooked
+7515	Other_roots
+75150	Burdock root, cooked
+75151	Yambean (jicama), raw
+75152	Cassava, cooked
+75153	Yam, cooked
+75154	Taro, cooked
+75155	Taro leaves, cooked
+752	Onion_family
+7520	Onions
+75200	Onions, raw
+75201	Onions, canned/cooked
+75202	Onions, dehydrated
+75203	Onions, green/spring/scallions, raw
+7521	Leeks, (bulb and lower-leaf portion), cooked
+7522	Chives, raw
+7523	Garlic, cooked
+753	Peppers
+7530	Sweet_peppers
+75300	Peppers, sweet/bell, raw
+75301	Peppers, sweet/bell, cooked
+75302	Pimento
+7531	Hot_peppers
+75310	Peppers, non-bell, raw
+75311	Peppers, non-bell, canned/cooked
+754	Squash, summer, cooked
+755	Seeds, alfalfa, sprouted, raw
+756	Corn
+7560	Corn (vegetable), raw
+7561	Corn (vegetable), canned/cooked
+7562	Corn (vegetable), canned
+7563	Popcorn, air-popped
+757	Artichokes, (globe or french), canned/cooked
+758	Asparagus
+7580	Asparagus, raw
+7581	Asparagus, cooked
+7582	Asparagus, canned
+759	Olives, ripe, pickled
+76	Specialty_vegetables
+760	Eggplant
+7600	Eggplant, raw
+7601	Eggplant, cooked
+761	Okra
+7610	Okra, raw
+7611	Okra, cooked
+762	Mushrooms
+7620	Mushrooms, raw
+7621	Mushrooms, cooked
+7622	Mushrooms, canned/cooked
+7623	Mushrooms, dried
+763	Celery
+7630	Celery, raw
+7631	Celery, cooked
+764	Fennel bulb, cooked
+765	Celeriac, cooked
+766	Cucumber, raw
+767	Bamboo shoots, canned/cooked
+768	Waterchestnuts, canned/cooked
+769	Lotus root, cooked
+77	Exotic_and_aquatic_vegetables
+770	Christophine/chayote, cooked
+771	Hearts of palm, cooked
+772	Kohlrabi, raw
+773	Ginger root, cooked
+774	Nopales
+7740	Nopales, raw
+7741	Nopales, cooked
+775	Seaweed
+7750	Seaweed, kelp, raw
+7751	Seaweed, laver, raw
+7752	Seaweed, agar, dried
+7753	Seaweed, spirulina, dried
+7754	Seaweed, wakame, raw
+776	Other_vegetables
+7760	Grape leaves, canned/cooked
+7761	Wax gourd/winter melon, cooked
+7762	Escarole, cooked
+7763	Pokeberry shoots (poke), cooked
+7764	Yeast extract
+7765	Avocado, raw
+7766	Tomatillos, cooked
+777	Fresh_legume_vegetables
+7770	Peas
+77700	Peas, edible-podded, raw
+77701	Peas, edible-podded, cooked
+77702	Peas, green, raw
+77703	Peas, green, cooked
+77704	Peas, green, canned/cooked
+778	Balsam-pear (bitter melon/gourd), pods, cooked
+8	Fats_Oils_Salad_Dressings_Condiments_and_Sauces
+81	Fats
+810	Butter
+811	Other_animal_fats
+8110	Fat, animal, chicken
+8111	Fat, animal, turkey
+8112	Fat, animal, beef
+82	Oils
+820	Oil, vegetable/nut/seed (other than cocoa butter)
+83	Condiments
+830	Salt
+831	Vinegar
+832	Flavorings, vanilla extract
+833	Capers, canned
+834	Horseradish root
+835	Sauce, pepper
+85	Spices
+850	Dried_herbs
+8500	Spices, basil, dried
+8501	Spices, oregano, dried
+8502	Spices, thyme, dried
+8503	Spices, marjoram, dried
+8504	Spices, sage
+8505	Spices, parsley, dried
+8506	Spices, coriander (cilantro) leaf, dried
+851	Basil, fresh
+852	Aromatic_spices
+8520	Seed_spices
+85200	Spices, caraway seed
+85201	Spices, celery seed
+85202	Spices, cumin
+85203	Spices, mustard seed, ground
+8521	Ground_spices
+85210	Spices, cinnamon
+85211	Spices, cloves, ground
+85212	Spices, ginger
+85213	Spices, nutmeg
+85214	Spices, turmeric, ground
+853	Pepper_spices
+8530	Spices, pepper, black
+8531	Spices, pepper, red/cayenne
+8532	Spices, paprika
+854	Powder_spices
+8540	Spices, garlic powder
+8541	Spices, onion powder
+8542	Spices, chili powder
+8543	Spices, curry powder
+8544	Spices, pumpkin pie spice
+9	Sugars_Sweets_and_Beverages
+91	Sugars_and_sweets
+910	Natural_sweeteners
+9100	Honey
+9101	Molasses
+9102	Syrup, maple
+9103	Syrup, sorghum
+9104	Syrup, agave
+911	Sugars
+912	Syrup, corn
+92	Baking_ingredients
+920	Chocolate, unsweetened
+921	Cocoa, dry powder, unsweetened
+922	Gelatin, dry powder, unsweetened
+923	Protein, milk/whey concentrate/isolate
+93	Non_alcoholic_beverages
+930	Water
+9300	Water, tap
+9301	Water, bottled
+931	Coffee_and_tea
+9310	Coffee beans/grounds/instant powder
+9311	Tea_varieties
+93110	Tea, green, leaves
+93111	Tea, black, leaves
+93112	Tea, black, instant powder
+93113	Tea, herbal, leaves/flowers/seeds
+93114	Tea, oolong, leaves
+932	Nuts, coconut water (liquid from coconuts)
+94	Alcoholic_beverages
+940	Distilled_spirits
+9400	Beverage, alcoholic, distilled
+9401	Beverage, alcoholic, liqueur
+941	Wine
+9410	Wine, table, NS as to red/white
+9411	Wine, table, white
+9412	Wine, table, rose
+9413	Wine, sweet, NS as to red/white
+942	Beverage, alcoholic, rice (sake)
+943	Juice, apple (alcoholic)
