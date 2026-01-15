@@ -48,7 +48,8 @@ jupyter lab
 2. Run the notebooks in order from 00 to 02
 - 00_generate_datasets.ipynb - download NHANES data and data cleaning
 - 01_build_nhanes_wweia.ipynb - add person specific covariates and outcomes, further preprocessing steps
-- 02_food_tree_taxonomy.ipynb - create the food tree taxonomy
+- 02a_build_ingredient_hierarchy.ipynb - create the food tree heirarchies for mixed meals and ingredients
+- 02b_food_tree_taxonomy.ipynb - apply the food tree hierarchies to the IR and polyphenol datasets
 
 Execute cells sequentially within each notebook using Shift + Enter or the "Run" button.
 
