@@ -11,10 +11,10 @@ date: "2025-10-11"
 # ===============================================================================================================
 
 ```{r}
-# Load necessary packages.
+# Load necessary packages
 library(ggtree)
 
-# Load the necessary functions.
+# Load the necessary functions
 source("../../diet_diver_lib/viz_food_tree.r")
 
 # create directory to save plots
@@ -54,9 +54,11 @@ ggsave("../../plot/foodcode_tree.pdf", annotated_tree,
 
 ```{r}
 ### Now do the same for the ingredient food tree (FNDDS)
+# Need to source viz_ingredient_tree script, it has different main food category lables
+source("../../diet_diver_lib/viz_ingredient_tree.R")
 
 # Load your tree object.
-tree <- read.tree("../../data/02/foodtree_out/wweia_ingredient_tree.nwk") 
+tree <- read.tree("../../data/02/foodtree_out/ir_ingredient_tree.nwk") 
 
 # Prepare the tree data for visualization.
 PrepFoodTreePlots(input.tree = tree)
@@ -68,7 +70,7 @@ VizFoodTree(input.tree=tree, layout = "radial")
 annotated_tree
 
 # Save.
-ggsave("../../plot/fndds_ingredient_tree.pdf", annotated_tree,
+ggsave("../../plot/ir_ingredient_tree.pdf", annotated_tree,
        device="pdf", width=7.2, height=7)
 ```
 
@@ -76,7 +78,7 @@ ggsave("../../plot/fndds_ingredient_tree.pdf", annotated_tree,
 ### Now do the same for the ingredient food tree (FDA)
 
 # Load your tree object.
-tree <- read.tree("../../data/02/foodtree_out/fda_wweia_ingredient_tree.nwk") 
+tree <- read.tree("../../data/02/foodtree_out/poly_ingredient_tree.nwk") 
 
 # Prepare the tree data for visualization.
 PrepFoodTreePlots(input.tree = tree)
@@ -88,6 +90,6 @@ VizFoodTree(input.tree=tree, layout = "radial")
 annotated_tree
 
 # Save.
-ggsave("../../plot/fda_ingredient_tree.pdf", annotated_tree,
+ggsave("../../plot/poly_ingredient_tree.pdf", annotated_tree,
        device="pdf", width=7.2, height=7)
 ```

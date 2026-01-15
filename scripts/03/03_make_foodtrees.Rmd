@@ -6,7 +6,7 @@ date: "2025-10-10"
 # ===============================================================================================================
 # Generate foodtrees for the NHANES mixed meals and ingredients features
 # Created on 02/16/2023 by Rie Sadohara
-# Modified on 10/10/25 by Jules Larke
+# Modified on 11/20/2025 by Jules Larke
 # ===============================================================================================================
 
 ```{r}
@@ -21,7 +21,7 @@ source("../../diet_diver_lib/Food_tree_scripts/make.food.tree.r") # This needs '
 source("../../diet_diver_lib/Food_tree_scripts/make.food.ifc.r")
 
 # create directory to save foodtree outputs
-dir.create("../../data/02/foodtree_out/")
+dir.create("../../data/02/foodtree_out")
 ```
 
 ```{r}
@@ -49,7 +49,7 @@ MakeFoodTree(nodes_fn= "../../data/02/NodeLabelsMCT.txt",
 
 ```{r}
 # ===============================================================================================================
-# Create Ingredients (FNDDS descriptions) Food Tree - IR dataset
+# Create Ingredients Food Tree - IR dataset
 # ===============================================================================================================
 
 # Create foodtree with the foods classified at a desired level of classification (Lv. 1-5).
@@ -57,26 +57,26 @@ MakeFoodTree(nodes_fn= "../../data/02/NodeLabelsMCT.txt",
 MakeFoodTree(nodes_fn= "../../data/02/node_labels_clean.txt", 
              addl_foods_fn = NULL,
              num_levels = 5,
-             food_database_fn =   "../../data/02/wweia_ingredient_taxa_clean.txt",  
-             output_tree_fn =     "../../data/02/foodtree_out/wweia_ingredient_tree.nwk", 
-             output_taxonomy_fn = "../../data/02/foodtree_out/wweia_ingredient_taxonomy.txt"
+             food_database_fn =   "../../data/02/ir_ingredient_taxa_clean.txt",  
+             output_tree_fn =     "../../data/02/foodtree_out/ir_ingredient_tree.nwk", 
+             output_taxonomy_fn = "../../data/02/foodtree_out/ir_ingredient_taxonomy.txt"
 )
 
 ```
 
 ```{r}
 # ===============================================================================================================
-# Create Ingredients (FDA descriptions) Food Tree - Polyphenol dataset
+# Create Ingredients Food Tree - Polyphenol dataset
 # ===============================================================================================================
 
 # Create foodtree with the foods classified at a desired level of classification (Lv. 1-5).
 # "fda_node_labels_clean.txt" has a list of levels and ingredient names derived from the FDA-FDD 
-MakeFoodTree(nodes_fn= "../../data/02/fda_node_labels_clean.txt", 
+MakeFoodTree(nodes_fn= "../../data/02/node_labels_clean.txt", 
              addl_foods_fn = NULL,
              num_levels = 5,
-             food_database_fn =   "../../data/02/fda_wweia_ingredient_taxa_clean.txt",  
-             output_tree_fn =     "../../data/02/foodtree_out/fda_wweia_ingredient_tree.nwk", 
-             output_taxonomy_fn = "../../data/02/foodtree_out/fda_wweia_ingredient_taxonomy.txt"
+             food_database_fn =   "../../data/02/poly_ingredient_taxa_clean.txt",  
+             output_tree_fn =     "../../data/02/foodtree_out/poly_ingredient_tree.nwk", 
+             output_taxonomy_fn = "../../data/02/foodtree_out/poly_ingredient_taxonomy.txt"
 )
 ```
 
@@ -121,9 +121,9 @@ MakeFoodIfc(food_records_fn=  "../../data/taxahfe/foodcode_recalls_otu_table.tsv
 ```
 
 ```{r}
-# load in data for Ingredients (FNDDS) wide format and wrangle
+# load in IR data for Ingredients and wrangle
 recalls <- data.table::fread('../../data/01/insulin_resistance/wweia_ingredients_long.tsv', header=T)
-taxa = read.csv("../../data/02/wweia_ingredient_taxa_clean.txt", sep="\t")
+taxa = read.csv("../../data/02/ir_ingredient_taxa_clean.txt", sep="\t")
 colnames(taxa)[3] = 'ingred_code'
 
 # write metadata (target + covariates) for taxaHFE (this output will be used for each IR diet dataset (Mixed meals, Ingredients, FPED))
@@ -139,55 +139,48 @@ recalls_taxa <- merge(recalls, taxa, by = "ingred_code")
 # sum total grams of each food eaten per subject
 otu.total <- aggregate(ingredient_intake_g_per_1000kcal ~ SEQN + FoodID, data=recalls_taxa, FUN="sum")
 colnames(otu.total)<-c("SEQN", "FoodID", "FoodAmt") #rename columns for creating otu_table
-write.table(otu.total, "../../data/taxahfe/recalls_otu_table.tsv", sep="\t", row.names=F, quote=F)
+write.table(otu.total, "../../data/taxahfe/ir_recalls_otu_table.tsv", sep="\t", row.names=F, quote=F)
 
 # read in taxonomy produced above to clean up extra text description at end (removes the appended leaf name so the tree appears correct)
-taxonomy <- data.table::fread('../../data/02/foodtree_out/wweia_ingredient_taxonomy.txt', header=T)
+taxonomy <- data.table::fread('../../data/02/foodtree_out/ir_ingredient_taxonomy.txt', header=T)
 taxonomy$taxonomy <- gsub(";[^;]+$", "", taxonomy$taxonomy)
-write.table(taxonomy, "../../data/02/foodtree_out/wweia_ingredient_taxonomy_clean.txt", sep="\t", row.names=F, quote=F)
+write.table(taxonomy, "../../data/02/foodtree_out/ir_ingredient_taxonomy_clean.txt", sep="\t", row.names=F, quote=F)
 ```
 
 ```{r}
 # Make the standard IFC table with data in gram weights of food.
 # For the food_records_fn argument, you need to supply 'sel.food.records' file that have 'FoodAmt' column.     
-MakeFoodIfc(food_records_fn=  "../../data/taxahfe/recalls_otu_table.tsv",   
+MakeFoodIfc(food_records_fn=  "../../data/taxahfe/ir_recalls_otu_table.tsv",   
             food_record_id =  "SEQN",                              
-            food_taxonomy_fn= "../../data/02/foodtree_out/wweia_ingredient_taxonomy_clean.txt",       
-            output_fn =       "../../data/taxahfe/ingred_otu_table.txt")  
+            food_taxonomy_fn= "../../data/02/foodtree_out/ir_ingredient_taxonomy_clean.txt",       
+            output_fn =       "../../data/taxahfe/ir_ingred_otu_table.txt")  
 ```
 
 ```{r}
-# load in data for Ingredients (FDA descriptions)
-recalls <- data.table::fread('../../data/00/wweia_dataset/wweia_ingredients_fda_desc_recalls_2023.csv', header=T)
-
-# load data for polyphenol SEQN IDs
-polyphenol = read.csv("../../data/01/polyphenol/NHANES_polyphenol_content_total_by_subject.csv")
-
-# subset participants for which polyphenol intakes are estimated
-recalls_filter = recalls %>% filter(SEQN %in% polyphenol$SEQN)
+# load in data for polyphenol Ingredients (FDA descriptions)
+recalls <- data.table::fread('../../data/01/polyphenol/poly_ingredients_long.tsv', header=T)
 
 # load taxa data generated above
-taxa = read.csv("../../data/02/fda_wweia_ingredient_taxa_clean.txt", sep="\t")
+taxa = read.csv("../../data/02/poly_ingredient_taxa_clean.txt", sep="\t")
 colnames(taxa)[3] = 'ingred_code' # rename
-recalls_taxa <- merge(recalls_filter, taxa, by = "ingred_code")
+recalls_taxa <- merge(recalls, taxa, by = "ingred_code")
 
 # sum total grams of each food eaten per subject
 otu.total <- aggregate(ingredient_intake_g_per_1000kcal ~ SEQN + FoodID, data=recalls_taxa, FUN="sum")
 colnames(otu.total)<-c("SEQN", "FoodID", "FoodAmt") #rename columns for creating otu_table
-write.table(otu.total, "../../data/taxahfe/fda_polyphenol_recalls_otu_table.tsv", sep="\t", row.names=F, quote=F)
+write.table(otu.total, "../../data/taxahfe/poly_recalls_otu_table.tsv", sep="\t", row.names=F, quote=F)
 
 # read in taxonomy produced above to clean up extra text description at end (removes the appended leaf name so the tree appears correct)
-taxonomy <- data.table::fread('../../data/02/foodtree_out/fda_wweia_ingredient_taxonomy.txt', header=T)
+taxonomy <- data.table::fread('../../data/02/foodtree_out/poly_ingredient_taxonomy.txt', header=T)
 taxonomy$taxonomy <- gsub(";[^;]+$", "", taxonomy$taxonomy)
-write.table(taxonomy, "../../data/02/foodtree_out/fda_wweia_ingredient_taxonomy_clean.txt", sep="\t", row.names=F, quote=F)
+write.table(taxonomy, "../../data/02/foodtree_out/poly_ingredient_taxonomy_clean.txt", sep="\t", row.names=F, quote=F)
 ```
 
 ```{r}
 # Make the standard IFC table with data in gram weights of food for the ingredients data with FDA descriptions
 # For the food_records_fn argument, you need to supply 'sel.food.records' file that have 'FoodAmt' column.     
-MakeFoodIfc(food_records_fn=  "../../data/taxahfe/fda_polyphenol_recalls_otu_table.tsv",   
+MakeFoodIfc(food_records_fn=  "../../data/taxahfe/poly_recalls_otu_table.tsv",   
             food_record_id =  "SEQN",                              
-            food_taxonomy_fn= "../../data/02/foodtree_out/fda_wweia_ingredient_taxonomy_clean.txt",       
-            output_fn =       "../../data/taxahfe/fda_polyphenol_ingred_otu_table.txt")  
+            food_taxonomy_fn= "../../data/02/foodtree_out/poly_ingredient_taxonomy_clean.txt",       
+            output_fn =       "../../data/taxahfe/poly_ingred_otu_table.txt")
 ```
-
