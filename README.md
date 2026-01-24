@@ -54,13 +54,17 @@ jupyter lab
 Execute cells sequentially within each notebook using Shift + Enter or the "Run" button.
 
 ### Create food trees using the DietDiveR package
-1. Install reqired packages
-2. Navigate to `scripts/03` and open R
-3. Run each code chunk sequentailly ...
+1. Clone the forked DietDiveR repository to the directory containing DietRes
+2. Install reqired packages
+3. Navigate to `scripts/03` and open R
+4. Run each code chunk sequentailly ...
 
 ### Machine learning analysis with TaxaHFE/ML
 (how does Andrew want people to access TaxaHFE)
 
 Point people to https://github.com/aoliver44/taxaHFE
+
+## Acknowledgements
+We would like to thank Abigail Johnson and Rie Sadohara for their work on DietDiveR which is used in this analysis...
 
 
